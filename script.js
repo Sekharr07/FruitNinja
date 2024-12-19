@@ -8,40 +8,47 @@ const fruitImages = [
 
 const fruitsContainer = document.querySelector('.fruits-container');
 
-// Helper function to generate a random number between a range
+// Random nUmber generator
 const random = (min, max) => Math.random() * (max - min) + min;
 
-// Function to create and animate a fruit
+// main animation function 
 function createFruit() {
     const fruit = document.createElement('div');
     fruit.classList.add('fruit');
     fruit.style.backgroundImage = `url(${fruitImages[Math.floor(random(0, fruitImages.length))]})`;
+    let minSize=4;
+    let maxSize=10;
+    const fruitSize = Math.floor(random(minSize, maxSize));
+    fruit.style.width = `${fruitSize}rem`;
+    fruit.style.height = `${fruitSize}rem`;
 
-    
 
-    // Set initial position (off-screen)
+    // const startX = 10;
+    // const startY = 50; // Below the screen
     const startX = random(0, window.innerWidth);
     const startY = window.innerHeight + 50; // Below the screen
-    console.log(startX, startY)
+    // console.log(startX, startY)
     fruit.style.left = `${startX}px`;
-    fruit.style.top = `${startY}px`;
+    fruit.style.top = `${startY}px`; 
 
-    // Add to container
+
     fruitsContainer.appendChild(fruit);
 
-    // Set the animation trajectory
     const endX = random(0, window.innerWidth);
-    const peakY = random(window.innerHeight / 4, window.innerHeight / 2);
+    const endY = -random(0, window.innerHeight + 50);
+    // console.log(endX, endY)
 
     const duration = random(2, 4); // Animation duration
 
-    // Animate using CSS
+
     fruit.animate(
         [
-            { transform: `translate(0, 0)` },
-            { transform: `translate(${endX - startX}px, -${peakY}px)` },
-            { transform: `translate(${endX - startX}px, ${window.innerHeight}px)` }
+            // Start position (startX, startY)
+            { transform: `translate(0, 0)` }, 
+            // End position (endX, endY)
+            { transform: `translate(${endX - startX}px, ${endY - startY}px)` } 
         ],
+
         {
             duration: duration * 1000,
             easing: 'ease-in-out',
@@ -50,23 +57,19 @@ function createFruit() {
         }
     );
 
-    // Remove fruit after animation
+
     setTimeout(() => {
         fruit.remove();
     }, duration * 1000);
 }
 
-// Function to spawn fruits periodically
 function spawnFruits() {
     setInterval(() => {
         createFruit();
-        // createFruit(); 
+        createFruit(); 
     }, 1000);
 }
 
-// Start spawning fruits
-// spawnFruits();
-
-createFruit();
+spawnFruits();
 
 
