@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+body {
+	margin: 0;
+	background-color: #000;
+	background-image: radial-gradient(ellipse at top, #6fcf97 0.0%, #68c78f 11.1%, #60be87 22.2%, #59b580 33.3%, #51ac78 44.4%, #49a370 55.6%, #419a68 66.7%, #399160 77.8%, #318858 88.9%, #297f50 100.0%);
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.06rem;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.container{
+    
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.box0{
+    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    top:0;
+    padding: 0.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: end;
+    margin-top: 0.4rem;
+}
+.nav_item{
+    margin-right: 1rem;
+    margin-left: 0.64rem;
+    
+
+}
+#main_box{
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.box1{
+  
+    display: flex;
+    flex-flow:column wrap;
+    
+    align-items: center;
+   justify-content: center;
+    margin-top: 0.4rem;
+
+}
+.inside{
+    width: 100%;
+    font-size: 2rem;
+}
+.player .inside:hover {
+    background-color: #666;
+}
+
+.fruits-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.fruit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
