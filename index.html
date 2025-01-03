@@ -7,23 +7,72 @@
     <title>Fruit Ninja 2D</title>
 </head>
 <body>
-    <div class="container">
-        <div class="box0">
-            <span class="nav_item">LOG IN</span>
-            <span class="nav_item">SIGN UP</span>
+    <!-- <canvas id="canvas" > </canvas> -->
+    <div id="container">
+        <div id="backbutton">
+            <-Back
         </div>
-        <div class="box1">
-            <div id="main_box">FRUIT NINJA</div>
+        <div class="box0" id="Headers">
+            
+            <div id="inGameContainer">
+                <div class="scoreDiv">
+                    <p id="High-sc">High Score: <span class="highscore"></span></p>
+                    <p>Score: <span class="score">0</span></p>
+                
+                </div>
+    
+            </div>
+            <div>
+                <span class="nav_item">LOG IN</span>
+                
+                <span class="nav_item">SIGN UP</span>
+            </div>
+        </div>
+        <div class="box1" id="loading-page">
+            <script src="script3.js" defer></script>
+            <div id="main_box">
+                 FRUIT NINJA 
+                <span><img class="fruitloading" src="./fruits/watermelon.png" alt="fruit" id="fruit"></span>
+            </div>
             <div class="player">
                 <div class="inside">PLAY GAME</div>
                 <div class="inside">PLAY UNRATED</div>
                 <div class="inside">LEADERBOARD</div>
             </div>
         </div>
+        
+        <div class="box2" id="game-over-page">
+            <div id="main_box">
+                GAME OVER
+                <img class="fruitloading" src="./fruits/watermelon.png" alt="fruit" id="fruit">
+            </div>
+            <div class="player inside">
+                CONTINUE->
+            </div>
+        </div>
+
+        <div class="box3" id="signup-page">
+            <div id="main_box">
+                SIGN UP
+                <img class="fruitloading" src="./fruits/strawberry.png" alt="fruit" id="fruit">
+                <div class="player inside">
+                    Username: <input type="text" id="username" placeholder="Enter Username">
+                </div>
+                <div class="player inside">
+                    E-Mail: <input type="email" id="email" placeholder="Enter E-Mail">
+                </div>
+                <div class="player inside">
+                    Password: <input type="password" id="password" placeholder="Enter Password">
+                </div>
+                <div class="player inside">
+                    <button type="button" id="createAccount">Create Account</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="fruits1"></div>
     <div class="fruits2"></div>
     <div class="fruits-container"></div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>

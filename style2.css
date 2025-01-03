@@ -1,0 +1,11 @@
+body{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_container{
+   height: 600px;
+   width: 400px;
+   background-color: blue;
+}
