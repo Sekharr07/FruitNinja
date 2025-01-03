@@ -1,5 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+//import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -8,12 +8,12 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase
 
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+//const app = initializeApp(firebaseConfig);
+//const analytics = getAnalytics(app);
 
-import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+//import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-const auth = getAuth(app);
+//const auth = getAuth(app);
 
 // var to store last highest score
 let lastHighestScore = 0;
@@ -362,42 +362,22 @@ sign_Up.addEventListener('click', function() {
     back_button.style.display = 'block';
 })
 
-back_button.addEventListener('click', function() {
-    console.log('back_button clicked');
-    const back_button = document.getElementById('backbutton');
-    back_button.style.display = 'none';
-    const loadingPage = document.getElementById('loading-page');
-    loadingPage.style.display = 'block';
-    const signup = document.getElementById('signup-page');
-    signup.style.display = 'none';
-    const nav = document.getElementById('Headers');
-    nav.style.display = 'flex'; 
-    nav.style.position = 'fixed'; 
-    nav.style.top = '0'; 
-    nav.style.right = '0'; 
-})
-
-create_account.addEventListener('click', function() {
-    //fetch the data of username, email and password
-    const username = document.getElementById('username').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-
-    createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+//back_button.addEventListener('click', function() {
+    //console.log('back_button clicked');
+    //const back_button = document.getElementById('backbutton');
+    //back_button.style.display = 'none';
+    //const loadingPage = document.getElementById('loading-page');
+    ///loadingPage.style.display = 'block';
+    //const signup = document.getElementById('signup-page');
+    //signup.style.display = 'none';
+    //const nav = document.getElementById('Headers');
+    //nav.style.display = 'flex'; 
+    //nav.style.position = 'fixed'; 
+    //nav.style.top = '0'; 
+    //nav.style.right = '0'; 
+//})
 
 
-
-})
 
 
 
