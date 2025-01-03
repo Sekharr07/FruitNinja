@@ -5,21 +5,13 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCUmz2uKSNf_8YIG29bI5UrFg-Nb39RmwQ",
-  authDomain: "fruitninjavol2-48f00.firebaseapp.com",
-  projectId: "fruitninjavol2-48f00",
-  storageBucket: "fruitninjavol2-48f00.firebasestorage.app",
-  messagingSenderId: "1060553831976",
-  appId: "1:1060553831976:web:551d4180309793e712271d",
-  measurementId: "G-FEVEGP64FF"
-};
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
 const auth = getAuth(app);
 
@@ -307,6 +299,7 @@ const sign_Up = signUp_LoginPageTexts[1];
 const log_in = signUp_LoginPageTexts[0];
 const back_button = document.getElementById('backbutton');
 const create_account = document.getElementById('createAccount');
+const enter= document.getElementById('login');
 
 //add event listener - on click
 playText.addEventListener('click', function() {

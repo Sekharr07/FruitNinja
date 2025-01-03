@@ -264,3 +264,13 @@ body {
     transform: scale(1.005);
     box-shadow: 0 0 10px rgba(95, 191, 239, 0.5);
 }
+
+.box4{
+    display: none;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.4rem;
+    
+
+}

@@ -9,6 +9,7 @@ const fruitImages = [
 const fruitsContainer = document.querySelector('.fruits-container');
 
 // Random nUmber generator
+const random = (min, max) => Math.random() * (max - min) + min;
 
 
 // main animation function 
